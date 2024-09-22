@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+cd /pm-libs && npm link
+cd /build && npm link @oracly/pm-libs

@@ -1,0 +1,39 @@
+{
+  "name": "@oracly/pm-libs",
+  "description": "Oracly V1 dApp Common libraries",
+  "version": "1.0.0",
+  "author": "Oracly Team <team@oracly.io>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build:lde": "./bin/dev.sh",
+    "start": "rm -rf app && NODE_ENV=production babel --watch libs --out-dir app --copy-files",
+    "build": "rm -rf app && NODE_ENV=production babel libs --out-dir app --copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2"
+  },
+  "dependencies": {
+    "big.js": "6.1.1",
+    "date-fns": "2.30.0",
+    "debug": "4.3.2",
+    "dot-prop-immutable": "2.1.1",
+    "ethers": "6.13.2",
+    "lodash": "4.17.21",
+    "@oracly/pm-wallet": "1.0.1"
+  },
+  "devDependencies": {
+    "@aoberoi/chokidar-cli": "2.0.0",
+    "@babel/cli": "7.25.6",
+    "@babel/core": "7.25.2",
+    "@babel/preset-env": "7.25.4",
+    "@babel/preset-react": "7.24.7",
+    "babel-plugin-module-resolver": "5.0.2",
+    "concurrently": "5.3.0"
+    "resize-observer-polyfill": "1.5.1"
+  },
+  "exports": {
+    "./": "./app/"
+  }
+}

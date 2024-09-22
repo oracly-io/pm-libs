@@ -1,0 +1,13 @@
+{
+  "presets": ["@babel/env", "@babel/react"],
+  "sourceMaps": true,
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "@constants": "./constants",
+        "@config": "./config",
+        "@libs": "./libs"
+      }
+    }]
+  ]
+}
